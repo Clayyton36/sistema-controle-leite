@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastrar Morador</title>
+</head>
+<body>
+
+<h1>Cadastrar Morador</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+</form>
+
+<br>
+
+<a href="/moradores/">Voltar para lista de moradores</a>
+
+</body>
+</html>

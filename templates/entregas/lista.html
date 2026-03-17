@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entregas</title>
+</head>
+<body>
+
+<h1>Lista de Entregas</h1>
+
+<a href="/entregas/novo/">Registrar nova entrega</a>
+
+<br><br>
+
+<table border="1">
+    <tr>
+        <th>Morador</th>
+        <th>Data</th>
+        <th>Quantidade</th>
+    </tr>
+
+    {% for entrega in entregas %}
+    <tr>
+        <td>{{ entrega.morador.nome }}</td>
+        <td>{{ entrega.data_entrega }}</td>
+        <td>{{ entrega.quantidade }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Voltar para o início</a>
+
+</body>
+</html>

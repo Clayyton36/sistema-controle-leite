@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moradores</title>
+</head>
+<body>
+
+<h1>Lista de Moradores</h1>
+
+<a href="/moradores/novo/">Cadastrar novo morador</a>
+
+<br><br>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+    </tr>
+
+    {% for morador in moradores %}
+    <tr>
+        <td>{{ morador.nome }}</td>
+        <td>{{ morador.cpf }}</td>
+        <td>{{ morador.telefone }}</td>
+        <td>{{ morador.endereco }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Voltar para o início</a>
+
+</body>
+</html>
