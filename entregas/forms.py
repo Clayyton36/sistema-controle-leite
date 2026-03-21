@@ -8,7 +8,7 @@ class EntregaForm(forms.ModelForm):
         fields = ['morador', 'data_entrega', 'quantidade']
 
         widgets = {
-            'morador': forms.Select(attrs={'class': 'form-control'}),
+            'morador': forms.Select(attrs={'class': 'form-control', 'id': 'id_morador'}),
             'data_entrega': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'quantidade': forms.NumberInput(attrs={'class': 'form-control'}),
         }
