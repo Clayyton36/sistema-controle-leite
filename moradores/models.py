@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Morador(models.Model):
     nome = models.CharField(max_length=100)
     nis = models.CharField(max_length=20, unique=True)
@@ -9,5 +8,5 @@ class Morador(models.Model):
     data_cadastro = models.DateField(auto_now_add=True)
     ativo = models.BooleanField(default=True)
 
-    def _str_(self):
-        return self.nome                                                        
+    def __str__(self):
+        return f"{self.nome} - {self.nis}"

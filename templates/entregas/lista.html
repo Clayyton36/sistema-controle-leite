@@ -17,6 +17,21 @@
 
     <div class="card shadow-sm">
         <div class="card-body">
+            <!-- FILTRO -->
+        <form method="get" class="mb-3">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <input type="date" name="data" value="{{ data_filtro }}" class="form-control" style="max-width: 200px;">
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+                <a href="{% url 'lista_entregas' %}" class="btn btn-secondary">Limpar</a>
+            </div>
+        </form>
+
+        <!-- RESUMO -->
+        <div class="mb-3">
+            <strong>Total de pessoas:</strong> {{ total_pessoas }} <br>
+            <strong>Total de leite entregue:</strong> {{ total_leite }}
+        </div>
+
 
             <table class="table table-striped">
                 <thead>
